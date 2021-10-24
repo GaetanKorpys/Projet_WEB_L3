@@ -27,7 +27,7 @@ _exemple_ : ``C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\Projet_Cocktai
 
 ## Nous avons utilisé :
 
-* [Botstrap](https://getbootstrap.com/) - Framework CSS 
+* [Tailwindcss](https://tailwindcss.com/) - Framework CSS 
 * [VS Code](https://code.visualstudio.com/) - Editeur de textes
 * [EasyPHP](https://www.easyphp.org/) - Serveur local
 
