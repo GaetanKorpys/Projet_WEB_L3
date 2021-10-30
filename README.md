@@ -10,7 +10,7 @@ Les donnés (Nom du cokctail, ingrédients...) sont stockés directement dans un
 
 Voici une maquette du projet : 
 
-![Maquette de l'application](https://github.com/GaetanKorpys/Projet_WEB_L3/blob/master/Data/Photos/Maquette.png)
+![Maquette de l'application](https://github.com/GaetanKorpys/Projet_WEB_L3/blob/master/Ressources/DonneesPerso/Image/Maquette.png)
 
 ## Installation
 
