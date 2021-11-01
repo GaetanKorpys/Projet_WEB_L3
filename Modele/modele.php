@@ -49,7 +49,22 @@ function match_cocktail($aliment,$cocktail)
     return $cocktail_valide;
 }
 
-
+/**
+ * Pemret d'obtenir un Tableau de cocktail.
+ * Chaque cocktail possède l'aliment passé en paramètre.
+ * 
+ * Algo :
+ * On parcours $Recettes et on vérifie pour chaque élément (cocktail) si
+ * celui-ci contient $aliment. 
+ * 
+ * Si c'est le cas, on ajoute ce cocktail dans $tab_cocktail_valide.
+ *
+ * @param string $aliment Nom de l'aliment 
+ *               Ex: Fruit à noyau, Pistache ...
+ * 
+ * 
+ * @return array $tab_cocktail_valide Tableau de cocktail
+ */
 function recherche_cocktail($aliment){
 
     global $Recettes;
@@ -95,6 +110,32 @@ function recherche_sous_categorie_aliment($aliment){
         }    
     }
     return $sous_categorie;
+}
+
+
+
+/**
+ * Renvoie le l'identifiant du cocktail (qui se trouve dans Donnees.inc.php) passé en paramètre 
+ *
+ * @param array $cocktail_recherche Cocktail 
+ * @return int $id Identifiant du cocktail passé en paramètre
+ */
+function get_id($cocktail_recherche){
+    global $Recettes;
+    $id = array_search($cocktail_recherche,$Recettes);
+    return $id;
+}
+
+
+/**
+ * Renvoie le cocktail situé à la position $id du Tableau $Recettes
+ *
+ * @param int $id identifiant (position) du cocktail 
+ * @return array Renvoie un cocktail
+ */
+function get_coktail($id){
+    global $Recettes;
+    return($Recettes[$id]);
 }
 
 

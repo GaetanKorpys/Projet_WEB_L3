@@ -25,7 +25,7 @@
                         <?php endforeach ?>
                     </ul>
                 </div> 
-                <a href="<?="../Vue/index.php?page=recette&alimentcourant=$aliment&ariane=$new_path&cocktail=$id" ?>" class="mx-auto p-2 mt-4 ease-out duration-700 bg-blue-600  hover:bg-blue-700 rounded transform hover:-translate-y-1 hover:scale-110">
+                <a href="<?="../Vue/index.php?page=recette&alimentcourant=$aliment&ariane=$new_path&cocktail="?><?=$id=get_id($cocktail)?>" class="mx-auto p-2 mt-4 ease-out duration-700 bg-blue-600  hover:bg-blue-700 rounded transform hover:-translate-y-1 hover:scale-110">
                     <span>Recette</span>
                 </a>
             </div>

@@ -1,6 +1,7 @@
 <?php
 require_once "../Controller/accueil.php";
 require_once "../Controller/cocktail.php";
+require_once "../Controller/recette.php";
 require_once "../Ressources/DonneesPerso/Utilitaire/fonction.inc.php";
 
 /**
@@ -23,7 +24,12 @@ function routerRequete(){
         break;
 
       case "recette":
-        //recette();
+        if(isset($_GET["cocktail"])){
+          recette($_GET["cocktail"]);
+        }else{
+          echo"erreur 404";
+        }
+        
         break;
     }
   }
