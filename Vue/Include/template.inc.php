@@ -9,61 +9,49 @@
     <title><?= $titre ?></title>
 </head>
 
-<body class="flex flex-col h-screen w-screen bg-cover bg-no-repeat bg-center bg-fixed" style="background-image: url(../Ressources/DonneesPerso/Image/background.jpg)">
+<body class="flex flex-col h-screen w-screen bg-cover bg-no-repeat bg-center bg-fixed text-gray-600" style="background-image: url(../Ressources/DonneesPerso/Image/background.jpg)">
 
     <!---Barre de naviguation--->
-    <header class="bg-gray-900 w-screen">
-        <div class="flex mx-auto max-w-6xl justify-between px-5 ">
+    <header class="bg-white w-screen text-xl">
+        <div class="flex mx-auto px-7 justify-between py-4 border-b-2 border-black">
             <!---Nav Gauche--->
-            <div class="flex space-x-4 ">
+            <div class="flex space-x-7 lg:space-x-10 ">
                 <!---Onglet Accueuil--->
-                <div>
-                    <a class="flex py-4" href="../Vue/index.php">
-                        <span class=" text-2xl text-center font-semi-bold font-heading hover:text-gray-200">Bar à cocktail</span>
+                <div class="flex items-center min-w-max">
+                    <a href="../Vue/index.php">
+                        <span class="text-sm md:text-xl transition duration-500 hover:text-black">BAR A COCKTAIL</span>
                     </a>
                 </div>
-                <div class="hidden items-center md:flex space-x-1">
+                <div class="hidden md:flex space-x-2 lg:space-x-10">
                     <!---Onglet Naviguation--->
-                    <a class="flex px-2 py-4 hover:text-gray-200 font-semibold font-heading transition duration-200" href="../Vue/index.php?page=cocktail">
+                    <a class="flex items-center hover:text-black transition duration-500" href="../Vue/index.php?page=cocktail">
                         <span class="pr-1">Naviguation</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
                     </a>
                     <!---Onglet Recettes--->
-                    <a class="flex px-2 py-4 hover:text-gray-200 font-semibold font-heading transition duration-200" href="..Vue/index.php?page=recette">
+                    <a class="flex items-center hover:text-black transition duration-500" href="..Vue/index.php?page=recette">
                         <span class="pr-1">Recettes</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform hover:rotate-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                        </svg>
                     </a>
                 </div>
             </div>
             <!---Barre de recherche--->
-            <div class="hidden md:flex relative items-center">
-                <form>
-                    <input type="text" placeholder="Rechercher" class="bg-gray-800 h-10 px-5 pr-10 rounded-full text-sm focus:outline-none">
-                    <button type="submit" class="hover:text-gray-200 absolute right-0 mt-3 mr-4 transform hover:scale-110">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <div class="hidden md:flex items-center w-full mx-10">
+                <div class="flex w-full rounded-full bg-white p-3 border border-gray-300 rounded-lg hover:border-gray-400">
+                    <input type="text" placeholder="Rechercher ..." class="w-full focus:placeholder-black text-sm focus:outline-none">
+                    <button class="transform hover:scale-125">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="flex h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                         </svg>
                     </button>
-                </form>
+                </div>
             </div>
             <!---Onglet connexion--->
-            <a class="hidden md:flex flex-shrink-0 hover:text-gray-200 items-center" href="../index.php?action=connexion">
-                <p class="pr-1">
-                    <span class="sr-only lg:not-sr-only">Espace de</span>
-                    Connexion
-                </p>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
-                </svg>
+            <a class="hidden md:flex transition duration-500 hover:text-black items-center" href="../index.php?action=connexion">
+                <span>Connexion</span>
             </a>
             <!---Nav Cachée--->
-            <div class="md:hidden flex items-center">
+            <div class="md:hidden flex items-center px-3 pt-2 transition duration-700 transform hover:rotate-90 ">
                 <button class="outline-none mobile-menu-button">
-                    <svg class=" w-6 h-6 text-gray-500 hover:text-blue-500 " x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-black" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                         <path d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
@@ -71,10 +59,10 @@
         </div>
         <!---Nav small screen--->
         <div class="hidden mobile-menu">
-            <ul class="">
-                <li><a href="../index.php?action=nav" class="block text-sm px-2 py-4 hover:text-blue-500 transition duration-200 ">Naviguation</a></li>
-                <li><a href="../index.php?action=recettes" class="block text-sm px-2 py-4 hover:text-blue-500 transition duration-200 ">Recettes</a></li>
-                <li><a href="../index.php?action=connexion" class="block text-sm px-2 py-4 hover:text-blue-500 transition duration-200 ">Espace de connexion</a></li>
+            <ul class="divide-y">
+                <li><a href="../Vue/index.php?page=cocktail" class="block text-sm px-2 py-4 hover:text-black transition duration-200 ">Naviguation</a></li>
+                <li><a href="../Vue/index.php?page=recettes" class="block text-sm px-2 py-4 hover:text-black transition duration-200 ">Recettes</a></li>
+                <li><a href="../Vue/index.php?page=connexion" class="block text-sm px-2 py-4 hover:text-black transition duration-200 ">Espace de connexion</a></li>
             </ul>
         </div>
         <script>
@@ -86,22 +74,24 @@
             });
         </script>
     </header>
-    <div class="flex p-4 flex-grow items-start">
-        <?= $contenu ?>
-    </div>
-    <footer class="flex bg-gray-900 justify-evenly items-center border-t-2 border-white">
+
+    <!---Contenu dynamique--->
+    <?= $contenu ?>   
+     
+    <footer class="flex bg-white justify-evenly items-center border-t-2 border-black">
         <div class="p-2 w-48 space-y-3">
             <span class="text-sm text-gray-400 mb-2">Réalisé par</span>
-            <ul class="text-s">
-                <li>Gaëtan Korpys</li>
+            <ul class="text-sm">
+                <lic>Gaëtan Korpys</li>
                 <li>Michael Ribeiro</li>
                 <li>Quentin Mayer</li>
             </ul>
         </div>
 
-        <div class="p-2 w-48">
-            <a href="#" class="flex hover:text-gray-400 transform hover:scale-110">
-                <span class="text-base font-medium">Retourner au menu</span>
+        <div class="p-2">
+            <a href="#" class="flex hover:text-black transition duration-700 transform hover:scale-110">
+                <span class="hidden sm:flex text-base font-medium">Retourner au début</span>
+                <span class="sm:hidden text-base font-medium">Remonter</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
                 </svg>

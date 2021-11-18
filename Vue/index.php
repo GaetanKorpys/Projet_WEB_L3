@@ -29,8 +29,10 @@ function routerRequete(){
         }else{
           echo"erreur 404";
         }
-        
         break;
+
+      case "favoris":
+        //favoris();
     }
   }
 }

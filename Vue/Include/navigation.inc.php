@@ -1,23 +1,19 @@
 <?php ob_start(); ?>
 
-<nav class=" min-w-max bg-gray-900 p-3 mt-6 rounded-lg border-2 border-white border-opacity-75 ">
+<nav class=" flex flex-col h-full min-w-max bg-white p-4 space-y-10">
     <div>
-        <h1 class="mb-3">Aliment Courant</h1>
-        <a href=<?="../Vue/index.php?page=cocktail&alimentcourant=Aliment"?> ><?="Aliment"?></a>
+        <h1 class="mb-3 font-bold pt-10">Aliment Courant :</h1>
+        <a class="hover:underline" href=<?="../Vue/index.php?page=cocktail&alimentcourant=Aliment"?> ><?="Aliment"?></a>
         <?php foreach(array_unique($ariane) as $etape ): ?>
             <?php $new_path = $new_path."_".$etape; ?>
-            <a href=<?="../Vue/index.php?page=cocktail&alimentcourant=$etape&ariane=$new_path"?>><?=$etape?></a>
+            <a class="hover:underline" href=<?="../Vue/index.php?page=cocktail&alimentcourant=$etape&ariane=$new_path"?>><?=$etape?></a>
         <?php endforeach ?>
-        <h2 class="mt-2">Sous-catégories :</h2>
     </div>    
-    <div>
-        <ul>
-            <?php foreach($sous_categorie as $aliment ): ?>
-                <li>
-                    <a href="<?= "../Vue/index.php?page=cocktail&alimentcourant=$aliment&ariane=$new_path"."_"."$aliment" ?>"><?=$aliment?></a>
-                </li>
-            <?php endforeach ?>
-        </ul>
+    <div class="space-y-4">
+        <h2 class="mb-2 mt-4 font-bold">Sous-catégories :</h2>
+        <?php foreach($sous_categorie as $aliment ): ?>
+            <a class="flex items-center bg-red-100 hover:bg-red-200 justify-between w-full p-2 rounded-lg cursor-pointer hover:backdrop-opacity-80 transition duration-300 ease-in-out transform  hover:-translate-y-0.5 hover:scale-105 hover:text-black" href="<?= "../Vue/index.php?page=cocktail&alimentcourant=$aliment&ariane=$new_path"."_"."$aliment" ?>"><?=$aliment?></a>
+        <?php endforeach ?>    
     </div>
 </nav>
 
