@@ -2,6 +2,7 @@
 require_once "../Controller/accueil.php";
 require_once "../Controller/cocktail.php";
 require_once "../Controller/recette.php";
+require_once "../Controller/recherche.php";
 require_once "../Ressources/DonneesPerso/Utilitaire/fonction.inc.php";
 
 /**
@@ -29,6 +30,10 @@ function routerRequete(){
         }else{
           echo"erreur 404";
         }
+        break;
+
+      case "recherche":
+        recherche("alimentcourant");
         break;
 
       case "favoris":
