@@ -10,6 +10,5 @@ $path = get_valeur_arg_url("ariane");
 $ariane = explode("_",$path);
 unset($ariane[0]);
 $new_path ="Aliment";
+
 require_once "../Vue/Include/navigation.inc.php";
-
-
