@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html lang="fr" class="text-white">
@@ -12,17 +14,17 @@
 <body class="flex flex-col h-screen w-screen bg-cover bg-no-repeat bg-center bg-fixed text-gray-600" style="background-image: url(../Ressources/DonneesPerso/Image/background.jpg)">
 
     <!---Barre de naviguation--->
-    <header class="bg-white w-screen text-xl">
-        <div class="flex mx-auto px-7 justify-between py-4 border-b-2 border-black">
+    <header class="bg-white w-screen ">
+        <div class="flex mx-auto px-10 md:px-7 justify-between py-4 border-b-2 border-black">
             <!---Nav Gauche--->
-            <div class="flex space-x-7 lg:space-x-10 ">
+            <div class="flex space-x-6">
                 <!---Onglet Accueuil--->
                 <div class="flex items-center min-w-max">
                     <a href="../Vue/index.php">
                         <span class="text-sm md:text-xl transition duration-500 hover:text-black">BAR A COCKTAIL</span>
                     </a>
                 </div>
-                <div class="hidden md:flex space-x-2 lg:space-x-10">
+                <div class="hidden md:flex space-x-3">
                     <!---Onglet Naviguation--->
                     <a class="flex items-center hover:text-black transition duration-500" href="../Vue/index.php?page=cocktail">
                         <span class="pr-1">Naviguation</span>
@@ -34,22 +36,23 @@
                 </div>
             </div>
             <!---Barre de recherche--->
-            <div class="hidden md:flex items-center w-full mx-10">
-                
-                    <div class="flex w-full rounded-full bg-white p-3 border border-gray-300 rounded-lg hover:border-gray-400">
-                        <input type="text" id="recherche" placeholder="Rechercher ..." class="w-full focus:placeholder-black text-sm focus:outline-none">
-                        <button id="button_search" class="transform hover:scale-125">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="flex h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                    </div>
-                
+            <div class="hidden md:flex md:mx-8 lg:mx-5 items-center w-full mx-5">
+                <div class="flex w-full rounded-full bg-white p-3 border border-gray-300 rounded-lg hover:border-gray-400">
+                    <input type="text" id="recherche" placeholder="Rechercher ..." class="w-full focus:placeholder-black text-sm focus:outline-none">
+                    <button id="button_search" class="transform hover:scale-125">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="flex h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
             </div>
             <!---Onglet connexion--->
-            <a class="hidden md:flex transition duration-500 hover:text-black items-center" href="../index.php?action=connexion">
-                <span>Connexion</span>
-            </a>
+            <div class="hidden lg:flex items-center">
+                <?= $connexionDynamique ?>
+            </div>
+            <div class="hidden md:flex lg:hidden items-center">
+                <a href="" class="border-2 border-gray-300 px-1 py-2 rounded hover:border-gray-400 min-w-max">Zone de connexion</a>
+            </div>
             <!---Nav Cachée--->
             <div class="md:hidden flex items-center px-3 pt-2 transition duration-700 transform hover:rotate-90 ">
                 <button class="outline-none mobile-menu-button">

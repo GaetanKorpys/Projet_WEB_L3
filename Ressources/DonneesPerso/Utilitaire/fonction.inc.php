@@ -1,6 +1,25 @@
 <?php
 
 /**
+ * Parse la chaine de caractère qui correspond à $cocktail["ingredients"] et stock
+ * chaque sous-chaine dans un Tableau
+ * 
+ * Chaque élément représente une quantité/indication concernant un ingrédient situé
+ * dans le Tableau $cocktail["index"].
+ * 
+ * 
+ * @param array $cocktail Cocktail à traiter
+ * 
+ * @return array $tab_quantite Tableau de chaine de caractère.
+ * 
+ */
+function get_quantite($cocktail){
+    $tab_quantite=array();
+    $tab_quantite = explode("|",$cocktail["ingredients"]);
+    return $tab_quantite;
+}
+
+/**
  * Extraction d'un argument voulu depuis l'url
  * 
  * @param string $arg_url Nom de l'argument recherché
@@ -70,4 +89,12 @@ function get_image($titre_cocktail){
 
     $nom_image = verif_nom_image($nom_parse,"../Ressources/DonneesProjet/Photos/");
     return $nom_image;
+}
+
+function getAge($date){
+
+    $date = explode("-", $date);
+
+    $age = (date("md", date("U", mktime(0, 0, 0, $date[2], $date[1], $date[0]))) > date("md") ? ((date("Y")-$date[0])-1):(date("Y")-$date[0]));
+    return $age;
 }

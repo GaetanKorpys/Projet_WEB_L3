@@ -3,7 +3,11 @@ require_once "../Controller/accueil.php";
 require_once "../Controller/cocktail.php";
 require_once "../Controller/recette.php";
 require_once "../Controller/recherche.php";
+require_once "../Controller/inscription.php";
+require_once "../Controller/deconnexion.php";
+require_once "../Controller/profil.php";
 require_once "../Ressources/DonneesPerso/Utilitaire/fonction.inc.php";
+require_once "../Ressources/DonneesPerso/Authentification/auth.php";
 
 /**
  * Centralise la gestion de la redirection des pages.
@@ -36,28 +40,23 @@ function routerRequete(){
         recherche("alimentcourant");
         break;
 
+      case "inscription":
+        inscription();
+        break;
+
+      case "deconnexion":
+        deconnexion();
+        break;
+
+      case "profil":
+        profil();
+        break;
+
       case "favoris":
         //favoris();
     }
   }
 }
-
-/**
- * Reste à gérer cette partie 
- * 
-* foreach(array_unique($ariane) as $etape) {
-*   if(!in_array($etape, array_keys($Hierarchie))) {
-*     echo "Mauvais URL\n";
-*       echo"<a href=".">Accueil</a>";
-*         exit();
-*    }
-* }
-*
-*  foreach(array_unique($ariane) as $etape) {
-*    $new_path = $new_path."_".$etape;
-*       echo "<a href='?alimentcourant=$etape&ariane=$new_path'>$etape</a>"."\n";
-*    }
-*/
 
 routerRequete();
 

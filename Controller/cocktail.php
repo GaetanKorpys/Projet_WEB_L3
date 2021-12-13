@@ -13,6 +13,20 @@ require_once "../Modele/modele.php";
  */
 function cocktail($aliment){
     
+    if(!empty($_POST['loginConnexion']) && !empty($_POST['motdepasseConnexion'])){
+        if(connexionUser($_POST['loginConnexion'],$_POST['motdepasseConnexion'])){
+            session_start();
+            $_SESSION["connecte"]=$_POST['loginConnexion'];
+        }
+    }
+
+    if(est_connecte()){
+        $login = $_SESSION["connecte"];
+        require_once "../Vue/Include/connexionMembre.php";
+    }
+    else{
+        require_once "../Vue/Include/connexionDefaut.php";
+    }
 
     $aliment_courant = affecte_valeur_defaut_aliment($aliment);
     $tab_cocktail_valide = recherche_cocktail($aliment_courant);
@@ -49,6 +63,9 @@ function cocktail($aliment){
 
     //Gestion de la Vue de la page Cocktail
     require_once "../Vue/cocktail.php";
+
+    //Gestion de la Vue du header + footer
+    require_once '/Include/template.inc.php';
 }
 
 
