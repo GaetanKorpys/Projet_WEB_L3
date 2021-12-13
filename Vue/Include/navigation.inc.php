@@ -20,22 +20,22 @@
         <h2 class="mb-2 mt-4 font-bold">Recherche :</h2>
         <?php if(isset($reponse) && isset($tab_aliment)) {
         if($reponse == '') {
-            echo "Aliment voulu";
+            echo "Aliment voulu :";
             if(is_array($tab_aliment["voulu"])) foreach($tab_aliment["voulu"] as $aliment):
-            echo " ,";
             echo $aliment;
+            echo " ,";
         endforeach;
         echo "<br>";
-        echo "Aliment non voulu";
+        echo "Aliment non voulu :";
         if(is_array($tab_aliment["non_voulu"])) foreach($tab_aliment["non_voulu"] as $aliment):
-            echo " ,";
             echo $aliment;
+            echo " ,";
         endforeach;
         echo "<br>";
-        echo "Aliment non reconnu";
+        echo "Aliment non reconnu :";
         if(is_array($tab_aliment["non_reconnu"])) foreach($tab_aliment["non_reconnu"] as $aliment):
-            echo " ,";
             echo $aliment;
+            echo " ,";
         endforeach;
         }else echo $reponse;} ?>
     </div>
