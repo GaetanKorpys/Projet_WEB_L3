@@ -22,19 +22,19 @@
         if($reponse == '') {
             echo "Aliment voulu";
             if(is_array($tab_aliment["voulu"])) foreach($tab_aliment["voulu"] as $aliment):
-            echo " ";
+            echo " ,";
             echo $aliment;
         endforeach;
         echo "<br>";
         echo "Aliment non voulu";
         if(is_array($tab_aliment["non_voulu"])) foreach($tab_aliment["non_voulu"] as $aliment):
-            echo " ";
+            echo " ,";
             echo $aliment;
         endforeach;
         echo "<br>";
         echo "Aliment non reconnu";
         if(is_array($tab_aliment["non_reconnu"])) foreach($tab_aliment["non_reconnu"] as $aliment):
-            echo " ";
+            echo " ,";
             echo $aliment;
         endforeach;
         }else echo $reponse;} ?>
