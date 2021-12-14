@@ -6,8 +6,10 @@ require_once "../Controller/recherche.php";
 require_once "../Controller/inscription.php";
 require_once "../Controller/deconnexion.php";
 require_once "../Controller/profil.php";
+require_once "../Controller/favoris.php";
 require_once "../Ressources/DonneesPerso/Utilitaire/fonction.inc.php";
 require_once "../Ressources/DonneesPerso/Authentification/auth.php";
+require_once "../Ressources/DonneesPerso/Favoris/fonctionFavoris.php";
 
 /**
  * Centralise la gestion de la redirection des pages.
@@ -53,7 +55,12 @@ function routerRequete(){
         break;
 
       case "favoris":
-        //favoris();
+        if(isset($_GET["cocktail"])){
+          addFavoris($_GET["cocktail"]);
+        }else{
+          printFavoris();
+        }
+        break;
     }
   }
 }

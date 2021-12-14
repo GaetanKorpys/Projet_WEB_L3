@@ -22,6 +22,7 @@ function recherche($aliment){
 
     if(est_connecte()){
         $login = $_SESSION["connecte"];
+        $tab_IdCockatil_favoris=getTabFav($login);
         require_once "../Vue/Include/connexionMembre.php";
     }
     else{

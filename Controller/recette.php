@@ -12,12 +12,13 @@ function recette($id_cocktail){
 
     if(est_connecte()){
         $login = $_SESSION["connecte"];
+        $tab_IdCockatil_favoris=getTabFav($login);
         require_once "../Vue/Include/connexionMembre.php";
     }
     else{
         require_once "../Vue/Include/connexionDefaut.php";
     }
-
+    $id = $id_cocktail;
     $cocktail = get_coktail($id_cocktail);
     $tab_quantite = get_quantite($cocktail);
 

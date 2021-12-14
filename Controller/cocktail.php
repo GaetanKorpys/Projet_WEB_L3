@@ -22,9 +22,11 @@ function cocktail($aliment){
 
     if(est_connecte()){
         $login = $_SESSION["connecte"];
+        $tab_IdCockatil_favoris=getTabFav($login);
         require_once "../Vue/Include/connexionMembre.php";
     }
     else{
+        $tab_IdCockatil_favoris=array();
         require_once "../Vue/Include/connexionDefaut.php";
     }
 

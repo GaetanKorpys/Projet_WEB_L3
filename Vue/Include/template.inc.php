@@ -30,8 +30,8 @@
                         <span class="pr-1">Naviguation</span>
                     </a>
                     <!---Onglet Recettes--->
-                    <a class="flex items-center hover:text-black transition duration-500" href="..Vue/index.php?page=recette">
-                        <span class="pr-1">Recettes</span>
+                    <a class="flex items-center hover:text-black transition duration-500" href="../Vue/index.php?page=favoris">
+                        <span class="pr-1">Favoris</span>
                     </a>
                 </div>
             </div>
