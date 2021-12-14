@@ -21,6 +21,7 @@ _exemple_ : ``C:\Program Files (x86)\EasyPHP-Devserver-17\eds-www\Projet_Cocktai
 
 ## Démarrage
 
+- ### ! `` L'index se situe dans le dossier VUE ``
 - Lancer le serveur local sur votre machine via l'application EasyPHP
 - Ouvrir un navigateur WEB (Firefox, Chorme ...)
 - Taper dans la barre d'adresse : ``localhost`` ou ``127.0.0.1`` pour pouvoir accéder à l'application WEB.
